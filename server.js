@@ -10,7 +10,7 @@ app.get("/version", (req, res) => {
 });
 
 // host 0.0.0.0
-let port = 8000;
+const port = parseInt(process.env.PORT) || 8080;
 app.listen(port, "0.0.0.0", () => {
   console.log(`Listening on http://localhost:${port}`);
 });
